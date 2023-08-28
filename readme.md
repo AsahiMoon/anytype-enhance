@@ -15,3 +15,9 @@ windows下运行Run.bat
 ## 所需环境
 
 - 需要通过npm安装好asar
+
+## 截图
+
+outline
+
+![](assets/1693220717000.png)
