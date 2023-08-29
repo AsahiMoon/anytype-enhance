@@ -25,10 +25,9 @@ function getOutline() {
 
   outlineHTML =
     `<div
-id="sidebar"
-class="sidebar active right"
-style="width: 150px; top: 150px; height: 400px;right:10px"
-><div class="over">
+    class="right"
+    style="position:fixed;width: 150px; top: 150px; height: 100px;right:10px"
+  ><div class="over">
 <div class="body">` +
     outlineHTML +
     `</div>
