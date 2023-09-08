@@ -1,7 +1,11 @@
 .editor {
-    font-family: Consolas , "Ubuntu Mono", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "PingFang SC", "Microsoft YaHei", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+.blocks .block.blockText{
+    letter-spacing: 0.035em;
+
+}
 .blocks .block.blockText.textHeader1>.wrapContent>.selectable>.dropTarget{
     font-family: Consolas , "Ubuntu Mono", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 32px;
@@ -19,20 +23,17 @@
 
 } 
 .textHeader1{
-    color:#ff0000
+    color:#0095ff
 }
 .textHeader2{
     color:#8064a9;
     font-size: 28.8px;
-    border-left: 0.8em solid #8064a9;
-    border-bottom: 1px solid #8064a9;
+    /* border-left: 0.8em solid #8064a9;
+    border-bottom: 1px solid #8064a9; */
 }
 .textHeader3{
     font-size: 25.6px;
     color:#5dd400
-}
-.textHeader4{
-    color:#0095ff
 }
 
 .linkCard {
