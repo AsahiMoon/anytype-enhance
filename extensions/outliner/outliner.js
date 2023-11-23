@@ -78,7 +78,7 @@ if(outlines.length == 0){
 
 }
 
-
+// 防抖函数，避免修改header的时候不断刷新outline
 function debounce(func, wait) {
   let timeout;
   return function(...args) {
@@ -88,6 +88,7 @@ function debounce(func, wait) {
 }
 const debouncedUpdate = debounce(updateOutline, 300);
 
+// 监听header的变化
 const observer = new MutationObserver(mutations => {
     debouncedUpdate();
 });
