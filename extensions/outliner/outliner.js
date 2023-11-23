@@ -16,9 +16,9 @@ function getOutline() {
     let level = parseInt(header.className.split(" ")[2].slice(-1));
 
     // 构建链接
-    outlineHTML += `<li  style="list-style:none;margin-left: ${level * 15}px;"><a href="#${
-      header.id
-    }">${header.innerText}</a></li>`;
+    outlineHTML += `<li  style="list-style:none;margin-left: ${
+      level * 15
+    }px;"><a href="#${header.id}">${header.innerText}</a></li>`;
   });
 
   outlineHTML += "</ul>";
@@ -37,63 +37,66 @@ function getOutline() {
   return outlineHTML;
 }
 
+var tempOutline;
 // 更新outline
 function updateOutline() {
-
-
   let outline = getOutline();
+
   // 1. 获取具有指定 ID 的元素
-const targetElement = document.getElementById("editorWrapper");
+  const targetElement = document.getElementById("editorWrapper");
 
+  // 判断是否存在
+  var outlines = document.querySelectorAll(".outline");
 
-// 判断是否存在
-var outlines = document.querySelectorAll(
-  ".outline"
-);
+  if (outlines.length == 0) {
+    // 3. 不存在的时候将新创建的 div 添加到指定的元素下
+    const newDiv = document.createElement("div");
+    newDiv.innerHTML = outline; // 为新的 div 设置内容
+    newDiv.classList.add("outline"); // 可选：为新的 div 添加类名
+    newDiv.className = "outline";
 
-// 2. 创建一个新的 div 元素
-const newDiv = document.createElement("div");
-newDiv.innerHTML = outline; // 为新的 div 设置内容
-newDiv.classList.add("outline"); // 可选：为新的 div 添加类名
-newDiv.className = 'outline';
+    targetElement.appendChild(newDiv);
+  } else {
+    // 增加判断header是否有变化，变化才进行生成大纲
+    if (tempOutline == outline) {
+      return;
+    }
+    tempOutline = outline;
 
-if(outlines.length == 0){
-  // 3. 不存在的时候将新创建的 div 添加到指定的元素下
-  targetElement.appendChild(newDiv);
-}else{
-  let outlineContainer = outlines[0]
-  const scrollTop = outlineContainer.scrollTop;
+    // 2. 创建一个新的 div 元素
+    const newDiv = document.createElement("div");
+    newDiv.innerHTML = outline; // 为新的 div 设置内容
+    newDiv.classList.add("outline"); // 可选：为新的 div 添加类名
+    newDiv.className = "outline";
 
+    let outlineContainer = outlines[0];
+    const scrollTop = outlineContainer.scrollTop;
 
-  // 使用新容器替换旧容器
-  outlineContainer.parentNode.replaceChild(newDiv, outlineContainer);
+    // 使用新容器替换旧容器
+    outlineContainer.parentNode.replaceChild(newDiv, outlineContainer);
 
-  // 更新引用，使后续的更新仍然有效
-  outlineContainer = newDiv;
+    // 更新引用，使后续的更新仍然有效
+    outlineContainer = newDiv;
 
-
-  // outlineContainer.scrollTop = scrollTop;
-}
-
-
+    // outlineContainer.scrollTop = scrollTop;
+  }
 }
 
 // 防抖函数，避免修改header的时候不断刷新outline
 function debounce(func, wait) {
   let timeout;
-  return function(...args) {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func.apply(this, args), wait);
+  return function (...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
   };
 }
 const debouncedUpdate = debounce(updateOutline, 300);
 
 // 监听header的变化
-const observer = new MutationObserver(mutations => {
-    debouncedUpdate();
+const observer = new MutationObserver((mutations) => {
+  debouncedUpdate();
 });
 
 const config = { childList: true, subtree: true, characterData: true };
 
 observer.observe(document.body, config);
-
