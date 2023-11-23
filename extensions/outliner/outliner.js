@@ -1,3 +1,36 @@
+// 大纲图标按钮点击事件
+function toggleOutline() {
+  var myDiv = document.getElementsByClassName("outline")[0];
+  if (myDiv.style.display === "none") {
+    myDiv.style.display = "block";
+  } else {
+    myDiv.style.display = "none";
+  }
+}
+
+// 添加大纲按钮
+function setOutlineButton() {
+  // 判断大纲按钮是否存在
+  var outlineButton = document.querySelectorAll(".outlineButton");
+  if (outlineButton.length == 0) {
+    // 获取具有 class="side right" 的元素
+    var sideRightDiv = document.querySelector(".side.right");
+    // 创建新的元素
+    var newElement = document.createElement("div"); // 例如，创建一个段落元素
+
+    newElement.className = "icon toggle big outlineButton";
+    // 在具有 class="side right" 的元素下插入新元素
+    sideRightDiv.appendChild(newElement);
+    // 获取按钮元素
+    var myButton = document.getElementsByClassName("outlineButton")[0];
+
+    // 添加事件监听器
+    myButton.addEventListener("click", function () {
+      toggleOutline();
+    });
+  }
+}
+
 // 获取outline内容
 function getOutline() {
   // 获取所有headers
@@ -40,6 +73,7 @@ function getOutline() {
 var tempOutline;
 // 更新outline
 function updateOutline() {
+  setOutlineButton();
   let outline = getOutline();
 
   // 1. 获取具有指定 ID 的元素
