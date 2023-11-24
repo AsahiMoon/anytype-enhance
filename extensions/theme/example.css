@@ -15,9 +15,7 @@
 .blocks .block.blockText.textHeader2>.wrapContent>.selectable>.dropTarget{
     font-family: Consolas , "Ubuntu Mono", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 28.8px;
-    padding: 5px 2px;
-
-
+    padding: 10px 2px;
 } 
 .blocks .block.blockText.textHeader3>.wrapContent>.selectable>.dropTarget{
     font-family: Consolas , "Ubuntu Mono", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
