@@ -60,11 +60,10 @@ function getOutline() {
     `<div
     class="right"
     style="position:fixed;width: 150px; top: 150px; height: 100px;right:10px"
-  ><div class="over">
-<div class="body">` +
+  >
+` +
     outlineHTML +
-    `</div>
-</div>
+    `
 </div>
 `;
   return outlineHTML;
