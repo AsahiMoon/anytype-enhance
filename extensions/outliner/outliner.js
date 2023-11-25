@@ -9,11 +9,12 @@ document.head.appendChild(linkElement);
 // 大纲图标按钮点击事件
 function toggleOutline() {
   var myDiv = document.getElementsByClassName("outline")[0];
-  if (myDiv.style.display === "none") {
-    myDiv.style.display = "block";
-  } else {
-    myDiv.style.display = "none";
-  }
+  // if (myDiv.style.display === "none") {
+  //   myDiv.style.display = "block";
+  // } else {
+  //   myDiv.style.display = "none";
+  // }
+  myDiv.classList.toggle("hidden");
 }
 
 // 添加大纲按钮
@@ -59,7 +60,7 @@ function getOutline() {
     // 构建链接
     outlineHTML += `<li id="outlineli" style="margin-left: ${
       level * 15
-    }px;"><a id="outlineHeader" " href="#${header.id}">${
+    }px;"><a id="outlineHeader${level}" " href="#${header.id}">${
       header.querySelector("#value").innerText
     }</a></li>`;
   });
@@ -69,7 +70,7 @@ function getOutline() {
   outlineHTML =
     `<div
     id="outlineDiv"
-    class="right"
+    class="right hiden"
   >
 ` +
     outlineHTML +

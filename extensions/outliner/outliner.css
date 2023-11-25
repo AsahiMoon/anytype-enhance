@@ -1,4 +1,7 @@
-#outlineHeader {
+#outlineHeader1,
+#outlineHeader2,
+#outlineHeader3,
+#outlineHeader4 {
   text-decoration: none;
 }
 
@@ -12,4 +15,16 @@
   top: 150px;
   height: 100px;
   right: 10px;
+}
+#outlineHeader1 {
+  color: #0095ff;
+}
+#outlineHeader2 {
+  color: #8064a9;
+}
+#outlineHeader13 {
+  color: #5dd400;
+}
+.hidden {
+    display: none;
 }
