@@ -51,7 +51,7 @@ function getOutline() {
     // 构建链接
     outlineHTML += `<li  style="list-style:none;margin-left: ${
       level * 15
-    }px;"><a href="#${header.id}">${header.innerText}</a></li>`;
+    }px;"><a href="#${header.id}">${header.querySelector("#value").innerText}</a></li>`;
   });
 
   outlineHTML += "</ul>";
