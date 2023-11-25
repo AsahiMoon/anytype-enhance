@@ -1,0 +1,15 @@
+#outlineHeader {
+  text-decoration: none;
+}
+
+#outlineli {
+  list-style: none;
+}
+
+#outlineDiv {
+  position: fixed;
+  width: 150px;
+  top: 150px;
+  height: 100px;
+  right: 10px;
+}

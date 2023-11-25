@@ -1,3 +1,11 @@
+// 添加大纲样式
+var linkElement = document.createElement("link");
+
+linkElement.rel = "stylesheet";
+linkElement.type = "text/css";
+linkElement.href = "./extensions/outliner/outliner.css"; 
+document.head.appendChild(linkElement);
+
 // 大纲图标按钮点击事件
 function toggleOutline() {
   var myDiv = document.getElementsByClassName("outline")[0];
@@ -49,17 +57,19 @@ function getOutline() {
     let level = parseInt(header.className.split(" ")[2].slice(-1));
 
     // 构建链接
-    outlineHTML += `<li  style="list-style:none;margin-left: ${
+    outlineHTML += `<li id="outlineli" style="margin-left: ${
       level * 15
-    }px;"><a href="#${header.id}">${header.querySelector("#value").innerText}</a></li>`;
+    }px;"><a id="outlineHeader" " href="#${header.id}">${
+      header.querySelector("#value").innerText
+    }</a></li>`;
   });
 
   outlineHTML += "</ul>";
 
   outlineHTML =
     `<div
+    id="outlineDiv"
     class="right"
-    style="position:fixed;width: 150px; top: 150px; height: 100px;right:10px"
   >
 ` +
     outlineHTML +
