@@ -23,7 +23,8 @@
 
 } 
 .textHeader1{
-    color:#0095ff
+    /* color:#0095ff */
+    /* color:#8064a9; */
 }
 .textHeader2{
     color:#8064a9;
@@ -33,14 +34,17 @@
 }
 .textHeader3{
     font-size: 25.6px;
-    color:#5dd400
+    color:#0095ff
+}
+.blocks .block.blockText.textHeader3>.wrapContent>.selectable>.dropTarget{
+    font-size: 21.6px;
 }
 
 .textQuote {
-  .additional {
-    .line {
-      border-width: 8px !important; 
-      border-color: rgba(116, 95, 181, 0.2) !important; 
+    .additional {
+      .line {
+        border-width: 8px !important; 
+        border-color: rgba(116, 95, 181, 0.2) !important; 
+      }
     }
   }
-}
