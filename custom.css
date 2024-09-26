@@ -1,0 +1,50 @@
+:root {
+    --color-text-primary: #002b36;
+    --color-text-secondary:	#586e75;
+    --color-text-tertiary: 	#839496;
+    --color-text-inversion: #eee8d5;
+    --color-shape-primary: 	#586e75;
+    --color-shape-secondary: 	#eee8d5;
+    --color-shape-tertiary: 	#eee8d5;
+    --color-shape-highlight-medium: rgba(79, 79, 79, 0.08);
+    --color-shape-highlight-light: rgba(79, 79, 79, 0.04);
+    --color-control-accent: #252525;
+    --color-control-active: #b6b6b6;
+    --color-control-inactive: #dcdcdc;
+    --color-control-bg: #fff;
+    --color-bg-primary: #fdf6e3;
+    --color-bg-loader: rgba(255,255,255,0.7);
+    --color-system-accent-100: #ffb522;
+    --color-system-accent-50: #ffd15b;
+    --color-system-accent-25: #ffee94;
+    --color-system-selection: rgba(24, 163, 241, 0.15);
+    --color-system-drop-zone: rgba(255, 187, 44, 0.25);
+    --color-yellow: #ecd91b;
+    --color-orange: #ffb522;
+    --color-red: #f55522;
+    --color-pink: #e51ca0;
+    --color-purple: #ab50cc;
+    --color-blue: #3e58eb;
+    --color-ice: #2aa7ee;
+    --color-teal: #0fc8ba;
+    --color-lime: #5dd400;
+    --color-green: #66B395;
+    --font-size-header1: 32px;
+    --font-size-header2: 28px;
+    --font-size-header3: 25.6px;
+    --line-height-header1: normal;
+}
+body {
+    font-family: Consolas , "Ubuntu Mono", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.blocks .block.blockText.textHeader1>.wrapContent>.selectionTarget>.dropTarget{
+    color:#8064a9;
+    text-align: center ;
+}
+.blocks .block.blockText.textHeader2>.wrapContent>.selectionTarget>.dropTarget{
+    color:#8064a9;
+    padding-left: 0.4em;
+    border-left:0.4em solid #8064a9;
+    border-bottom: 1px solid #8064a9;
+}
