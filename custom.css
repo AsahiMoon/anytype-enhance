@@ -38,6 +38,7 @@ body {
     font-family: Consolas , "Ubuntu Mono", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/* 设置header样式 */
 .blocks .block.blockText.textHeader1>.wrapContent>.selectionTarget>.dropTarget{
     color:#8064a9;
     text-align: center ;
@@ -47,4 +48,22 @@ body {
     padding-left: 0.4em;
     border-left:0.4em solid #8064a9;
     border-bottom: 1px solid #8064a9;
+}
+.blocks .block.blockText.textHeader3>.wrapContent>.selectionTarget>.dropTarget{
+    color:#8064a9;
+}
+
+/* .blocks .block.blockText.textQuote>.wrapContent>.selectionTarget>.dropTarget>.flex>.editableWrap{
+    padding-left: 28px;
+    border-left: 0.3rem solid rgba(116, 95, 181, 0.2);
+} */
+
+/* 设置header1下划线 */
+.blocks .block.blockText.textHeader1>.wrapContent>.selectionTarget>.dropTarget:after {
+    content: "";
+    display: block;
+    margin: 0.2rem auto 0;
+    width: 6rem;
+    height: 2px;
+    border-bottom: 2px solid #8064a9;
 }
