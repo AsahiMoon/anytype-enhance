@@ -1,11 +1,11 @@
 :root {
     --color-text-primary: #002b36;
-    --color-text-secondary:	#586e75;
-    --color-text-tertiary: 	#839496;
+    --color-text-secondary: #586e75;
+    --color-text-tertiary:  #839496;
     --color-text-inversion: #eee8d5;
-    --color-shape-primary: 	#586e75;
-    --color-shape-secondary: 	#eee8d5;
-    --color-shape-tertiary: 	#eee8d5;
+    --color-shape-primary:  #586e75;
+    --color-shape-secondary:    #eee8d5;
+    --color-shape-tertiary:     #eee8d5;
     --color-shape-highlight-medium: rgba(79, 79, 79, 0.08);
     --color-shape-highlight-light: rgba(79, 79, 79, 0.04);
     --color-control-accent: #252525;
@@ -33,6 +33,8 @@
     --font-size-header2: 28px;
     --font-size-header3: 24.6px;
     --line-height-header1: normal;
+    --line-height-header2: normal;
+    --line-height-header3: normal;
 }
 body {
     font-family: Consolas , "Ubuntu Mono", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
