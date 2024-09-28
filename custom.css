@@ -70,6 +70,11 @@ body {
     border-bottom: 2px solid #8064a9;
 }
 
+.blocks .block.blockDataview .dataviewHead .editableWrap{
+    font-size: 22px
+}
+
+
 /* --------- FONT COLOURS IN LIGHT MODE ---------\
 */
 
